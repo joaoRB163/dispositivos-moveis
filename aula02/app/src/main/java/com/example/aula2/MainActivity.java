@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Button butao = findViewById(R.id.button);
+        Button reset = findViewById(R.id.button2);
         TextView t = findViewById(R.id.textView);
 
         Random random = new Random();
@@ -38,6 +39,12 @@ public class MainActivity extends AppCompatActivity {
             findViewById(R.id.main).setBackgroundColor(Color.rgb(r, g, b));
             i++;
             t.setText("Hello World!\n" + "\t\t\t\t" + Integer.toString(i));
+        });
+
+        reset.setOnClickListener(view -> {
+            findViewById(R.id.main).setBackgroundColor(Color.rgb(255, 255, 255));
+            i = 0;
+            t.setText("Hello World!");
         });
 
     }
